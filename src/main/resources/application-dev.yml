@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/orm_platform
+    username: orm_user
+    password: orm_pass
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

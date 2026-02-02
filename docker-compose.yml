@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:16
+    container_name: orm_platform_pg
+    environment:
+      POSTGRES_DB: orm_platform
+      POSTGRES_USER: orm_user
+      POSTGRES_PASSWORD: orm_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - orm_platform_pg_data:/var/lib/postgresql/data
+
+volumes:
+  orm_platform_pg_data:
